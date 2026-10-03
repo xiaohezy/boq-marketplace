@@ -1,0 +1,183 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "date": "2026-10-03",
+    "source": "哈萨克斯坦 Block R 项目顺丰货物清单(3.0) + 平台校验修正",
+    "usage": "解析产出 canonical 表时按 category 预填 hs_candidates（人工确认后生效）；hazmat_flag=Y 或 C 的行必须在报告'物流信息缺口清单'中列出",
+    "hs_note": "HS 为候选编码（中国出口 10 位），目的国税率以清关行确认为准；confidence: H=顺丰清单已用, M=平台修正建议, L=待用户确认"
+  },
+  "categories": {
+    "A1": {
+      "name": "板式换热器", "name_en": "Plate Heat Exchanger (PHE)",
+      "hs_candidates": [{"code": "8419500090", "desc": "热交换装置", "confidence": "M"}],
+      "hazmat_flag": "N", "hazmat_note": "无磁无电无液体",
+      "packaging": "木箱", "source_hs": null
+    },
+    "A2": {
+      "name": "水泵（离心泵/消防泵/控制柜）", "name_en": "Pumps",
+      "hs_candidates": [
+        {"code": "8413709990", "desc": "其他离心泵", "confidence": "M"},
+        {"code": "8537109090", "desc": "泵控制柜（≤1000V）", "confidence": "M"}
+      ],
+      "hazmat_flag": "N", "packaging": "木箱", "source_hs": null
+    },
+    "A3": {
+      "name": "空气处理机组", "name_en": "Air Handling Unit",
+      "hs_candidates": [{"code": "8415830090", "desc": "带制冷/制热装置的空气调节机", "confidence": "M"}],
+      "hazmat_flag": "N",
+      "packaging": "CKD 散件+胶合板箱（实测厂家方案）",
+      "source_hs": "841869.20.90（顺丰清单，疑偏冷柜类，建议复核）"
+    },
+    "A4": {
+      "name": "风机盘管", "name_en": "Fan Coil Unit",
+      "hs_candidates": [{"code": "8415830000", "desc": "空气调节机", "confidence": "H"}],
+      "hazmat_flag": "N", "source_hs": "841583.00.00"
+    },
+    "A5": {
+      "name": "地板对流器", "name_en": "Trench Heater",
+      "hs_candidates": [{"code": "7322190000", "desc": "非电暖散热器", "confidence": "H"}],
+      "hazmat_flag": "N", "source_hs": "7322190000"
+    },
+    "A6": {
+      "name": "风机（排烟/排风/加压/新风）", "name_en": "Fans",
+      "hs_candidates": [{"code": "8414599099", "desc": "其他风机", "confidence": "M"}],
+      "hazmat_flag": "N", "source_hs": null
+    },
+    "A7": {
+      "name": "黑钢管/镀锌钢管", "name_en": "Black/Galv. Steel Pipe",
+      "hs_candidates": [
+        {"code": "7306309000", "desc": "焊接钢管", "confidence": "H"},
+        {"code": "7304399000", "desc": "无缝钢管", "confidence": "H"}
+      ],
+      "hazmat_flag": "N", "transport_note": "6m 定尺，密度大——全项目 72% 重量来源（3362T/4637T），按重柜配载",
+      "source_hs": "7306309000 / 7304 3990"
+    },
+    "A8": {
+      "name": "铜管", "name_en": "Copper Pipe Coil",
+      "hs_candidates": [{"code": "7411109000", "desc": "铜管", "confidence": "H"}],
+      "hazmat_flag": "N", "source_hs": "741110.90.00"
+    },
+    "A9": {
+      "name": "PPR/PVC 塑料管及地漏", "name_en": "PPR/PVC Pipes",
+      "hs_candidates": [
+        {"code": "3917210000", "desc": "PP 塑料硬管", "confidence": "M"},
+        {"code": "3917230000", "desc": "PVC 塑料硬管", "confidence": "M"},
+        {"code": "3922900000", "desc": "塑料地漏等卫生配件", "confidence": "M"}
+      ],
+      "hazmat_flag": "N", "source_hs": null
+    },
+    "A10": {
+      "name": "保温材料", "name_en": "Insulation",
+      "hs_candidates": [
+        {"code": "7019809000", "desc": "玻璃棉制品", "confidence": "M"},
+        {"code": "4008110000", "desc": "橡塑保温板", "confidence": "M"}
+      ],
+      "hazmat_flag": "N", "transport_note": "体积大重量轻，按泡货配载",
+      "source_hs": "841590.90.00（顺丰清单=空调零件，错误，应改）"
+    },
+    "A11": {
+      "name": "阀门", "name_en": "Valves",
+      "hs_candidates": [{"code": "8481804090", "desc": "其他阀门", "confidence": "M"}],
+      "hazmat_flag": "N", "source_hs": null
+    },
+    "A12": {
+      "name": "风口/风阀", "name_en": "Air Outlets & Dampers",
+      "hs_candidates": [
+        {"code": "7616991000", "desc": "铝制风口百叶", "confidence": "L"},
+        {"code": "8481809090", "desc": "风阀（防火阀/排烟阀）", "confidence": "L"}
+      ],
+      "hazmat_flag": "N", "source_hs": null
+    },
+    "A13": {
+      "name": "卫浴洁具及五金", "name_en": "Sanitaryware",
+      "hs_candidates": [
+        {"code": "6910100000", "desc": "瓷制卫生器具", "confidence": "H"},
+        {"code": "3922900000", "desc": "塑料水箱及配件", "confidence": "H"},
+        {"code": "8481809000", "desc": "龙头阀门", "confidence": "H"},
+        {"code": "8302500000", "desc": "卫浴五金挂件", "confidence": "H"},
+        {"code": "7418200000", "desc": "铜制地漏", "confidence": "H"}
+      ],
+      "hazmat_flag": "N",
+      "source_hs": "清单已全；挂墙妇洗器申报 8481809000 疑应为 6910100000"
+    },
+    "A14": {
+      "name": "地漏/存水弯/检查口", "name_en": "Floor Drains & Traps",
+      "hs_candidates": [
+        {"code": "7324900000", "desc": "钢铁制卫生器具零件", "confidence": "M"},
+        {"code": "7418200000", "desc": "铜制卫生器具", "confidence": "M"}
+      ],
+      "hazmat_flag": "N", "source_hs": null
+    },
+    "A15": {
+      "name": "VRF 多联机", "name_en": "VRF System",
+      "hs_candidates": [
+        {"code": "8415830000", "desc": "空气调节机（整机）", "confidence": "M"},
+        {"code": "8415909000", "desc": "分歧管等零件", "confidence": "H"}
+      ],
+      "hazmat_flag": "C",
+      "hazmat_note": "出厂预充制冷剂：R410A=2.2 类非易燃气体；R32=2.1 类易燃气体。必须确认厂家出厂充注状态（充氮/真空=非危）",
+      "source_hs": "841590.90.00（顺丰清单内外机均按零件申报，疑应为整机 8415.83）"
+    },
+    "A16": {
+      "name": "风幕机", "name_en": "Air Curtain",
+      "hs_candidates": [{"code": "8414599099", "desc": "其他风机", "confidence": "H"}],
+      "hazmat_flag": "N", "source_hs": "8414599099"
+    },
+    "C1": {
+      "name": "低压/中压开关柜", "name_en": "LV/MV Switchgear",
+      "hs_candidates": [
+        {"code": "8537109090", "desc": "≤1000V 配电柜", "confidence": "H"},
+        {"code": "8537209000", "desc": ">1000V 开关柜", "confidence": "H"}
+      ],
+      "hazmat_flag": "N", "temp_note": "适用 -5℃ 至 40℃", "source_hs": "8537109090/8537209000"
+    },
+    "C3": {
+      "name": "自动转换隔离开关", "name_en": "ATS / Isolator Switch",
+      "hs_candidates": [{"code": "8536500000", "desc": "开关（≤1000V）", "confidence": "M"}],
+      "hazmat_flag": "N", "source_hs": null
+    },
+    "C4": {
+      "name": "UPS 及蓄电池", "name_en": "UPS & Storage Battery",
+      "hs_candidates": [
+        {"code": "8504402000", "desc": "UPS 主机", "confidence": "H"},
+        {"code": "8507200000", "desc": "铅酸蓄电池", "confidence": "H"}
+      ],
+      "hazmat_flag": "Y",
+      "hazmat_note": "铅酸蓄电池=8 类危险品 UN2794/UN2800，海运/铁路需危包证+MSDS；锂电=9 类 UN3480。顺丰清单未标危品=重大隐患",
+      "source_hs": "8504402000/8507200000/8504902000"
+    },
+    "C5": {
+      "name": "接地防雷材料", "name_en": "Earthing & Lightning Protection",
+      "hs_candidates": [
+        {"code": "7326909000", "desc": "铜包钢接地极", "confidence": "H"},
+        {"code": "7409190000", "desc": "接地铜排", "confidence": "H"},
+        {"code": "8544492900", "desc": "接地电缆", "confidence": "H"},
+        {"code": "7419809900", "desc": "铜制连接夹具", "confidence": "H"}
+      ],
+      "hazmat_flag": "C",
+      "hazmat_note": "放热焊粉（exothermic welding powder）通常属 4.1 类易燃固体，需确认厂家 MSDS；焊粉与模具分开申报",
+      "source_note": "源表英文品名与中文错位（避雷针→Tape Clamp、放热焊接→Digital Multimeter），需逐行人工修正"
+    },
+    "C8": {
+      "name": "应急照明及集中电源", "name_en": "Emergency Lighting & CBS",
+      "hs_candidates": [
+        {"code": "9405610000", "desc": "应急灯具", "confidence": "H"},
+        {"code": "8504409990", "desc": "应急照明集中电源（含电池）", "confidence": "M"}
+      ],
+      "hazmat_flag": "Y",
+      "hazmat_note": "集中电源含电池=危品（铅酸 8 类/锂电 9 类）；顺丰清单集中电源按 940561 灯具申报=归类错误",
+      "source_hs": "9405610000（危品标记=是，正确）"
+    },
+    "D1": {
+      "name": "低压密集母线", "name_en": "LV Busway",
+      "hs_candidates": [{"code": "8536909000", "desc": "母线槽", "confidence": "H"}],
+      "hazmat_flag": "N", "source_hs": "8536909000"
+    },
+    "D6": {
+      "name": "中压开关柜（进线/馈线/母联/隔离/PT）", "name_en": "MV Switchgear",
+      "hs_candidates": [{"code": "8537209000", "desc": ">1000V 开关柜", "confidence": "H"}],
+      "hazmat_flag": "N",
+      "source_hs": "8537109090-94（按柜型细分到 853710=错误，中压应为 8537.20）"
+    }
+  }
+}
