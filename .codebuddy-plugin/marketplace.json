@@ -4,14 +4,22 @@
     "name": "Wanda Industrial Group"
   },
   "description": "外贸订单智能分析比对技能市场：BOQ 询价单/厂家报价智能解析、错漏校验、多厂比价",
-  "version": "1.4.0",
+  "version": "1.10.0",
   "plugins": [
     {
       "name": "boq",
       "source": "./plugins/boq",
-      "description": "外贸订单智能分析比对：BOQ 询价单/厂家报价单智能解析、错漏校验、多厂比价。支持 xlsx/xls/pdf/docx，22 条校验规则，含 HS 编码品类库与中间表输出对齐。",
-      "version": "1.4.0",
-      "keywords": ["BOQ", "询价", "报价", "比价", "外贸", "机电采购", "对账"],
+      "description": "外贸订单智能分析比对：BOQ 询价单/厂家报价单智能解析、错漏校验、多厂比价。支持 xlsx/xls/pdf/docx，36 条校验规则，含 HS 编码品类库、价目表匹配与中间表输出对齐。",
+      "version": "1.10.0",
+      "keywords": [
+        "BOQ",
+        "询价",
+        "报价",
+        "比价",
+        "外贸",
+        "机电采购",
+        "对账"
+      ],
       "category": "productivity"
     }
   ]
