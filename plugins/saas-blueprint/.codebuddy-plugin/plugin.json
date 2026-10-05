@@ -1,0 +1,19 @@
+{
+  "name": "saas-blueprint",
+  "version": "1.1.0",
+  "description": "从 0 到 1 创立并跑通一个行业 SaaS 平台的蓝图与关键代码骨架：单文件 HTML+云服务极简架构、数据模型与 RLS 设计、角色申请审批体系、供应商/客户门户、发布保域名、自动化验收。附录含外贸报价平台专用手册。",
+  "author": "Wanda Industrial Group",
+  "keywords": [
+    "SaaS",
+    "平台搭建",
+    "RLS",
+    "角色权限",
+    "审批流",
+    "供应商门户",
+    "云服务",
+    "platform",
+    "blueprint",
+    "multi-role"
+  ],
+  "skills": "./skills"
+}
